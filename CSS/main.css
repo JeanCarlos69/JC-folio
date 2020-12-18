@@ -48,7 +48,7 @@ body {
 
 /* keep thing from toching the screen */
 section {
-  padding: 4.5em 2em;
+  padding: 5em 2em;
 }
 
 img {
@@ -59,6 +59,32 @@ img {
 strong {
   font-weight: var(--fw--bold);
 }
+
+:focus {
+  outline: 3px solid var(--clr-accent);
+  outline-offset: 3px;
+}
+
+/* BUTTONS */
+
+.btn {
+  display: inline-block;
+  padding: .5em 2.5em;
+  background: #16e0bd;
+  color: var(--clr-dark);
+  text-decoration: none;
+  cursor: pointer;
+  font-size: .8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--fw-bold);
+  transition: transform 200ms ease-in-out;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
 
 /* TYPOGRAHY */
 h1,
@@ -122,7 +148,7 @@ nav {
   display: inline-block;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 800px) {
   .intro {
     display: grid;
     width: min-content;
@@ -154,9 +180,50 @@ nav {
 
 /* MY SERVICES SECTION */
 .my-services {
-  background-color: var(--clr--dark);
+  background-color: var(--clr--dark); /*play with the color without background-blend-mode*/
   background-image: url(../img/pexels-marta-branco.jpg);
   background-size: cover;
   background-blend-mode: multiply; /*darker layout*/
   color: var(--clr--light);
+  text-align: center;
+}
+
+.section__title--services{
+  color: var(--clr--accent);
+  position: relative;
+}
+
+/* creating the bar above the title */
+
+.section__title--services::after{
+  content: '';
+  display: block;
+  width: 2em;
+  height: 1px;
+  margin: 0.5em auto 1em;
+  /* background: currentColor; copy the color before it */
+  background: var(--clr--light);
+  opacity: 0.5;
+}
+
+.services {
+  margin-bottom: 2em;
+}
+
+.service {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media (min-width: 800px){
+  .services{
+    display: flex;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service + .service {
+    margin-left: 2em; /*Separete the text */
+}
 }
