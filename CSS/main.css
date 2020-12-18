@@ -69,12 +69,12 @@ strong {
 
 .btn {
   display: inline-block;
-  padding: .5em 2.5em;
+  padding: 0.5em 2.5em;
   background: #16e0bd;
   color: var(--clr-dark);
   text-decoration: none;
   cursor: pointer;
-  font-size: .8rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: var(--fw-bold);
@@ -84,7 +84,6 @@ strong {
 .btn:hover {
   transform: scale(1.1);
 }
-
 
 /* TYPOGRAHY */
 h1,
@@ -180,7 +179,9 @@ nav {
 
 /* MY SERVICES SECTION */
 .my-services {
-  background-color: var(--clr--dark); /*play with the color without background-blend-mode*/
+  background-color: var(
+    --clr--dark
+  ); /*play with the color without background-blend-mode*/
   background-image: url(../img/pexels-marta-branco.jpg);
   background-size: cover;
   background-blend-mode: multiply; /*darker layout*/
@@ -188,15 +189,15 @@ nav {
   text-align: center;
 }
 
-.section__title--services{
+.section__title--services {
   color: var(--clr--accent);
   position: relative;
 }
 
 /* creating the bar above the title */
 
-.section__title--services::after{
-  content: '';
+.section__title--services::after {
+  content: "";
   display: block;
   width: 2em;
   height: 1px;
@@ -215,8 +216,8 @@ nav {
   margin: 0 auto;
 }
 
-@media (min-width: 800px){
-  .services{
+@media (min-width: 800px) {
+  .services {
     display: flex;
     max-width: 1000px;
     margin-left: auto;
@@ -225,5 +226,48 @@ nav {
 
   .service + .service {
     margin-left: 2em; /*Separete the text */
+  }
 }
+
+/* About me */
+
+.about-me {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-me__img {
+  box-shadow: var(--bs);
+}
+
+@media (min-width: 600px) {
+  .about-me {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    grid-template-areas:
+      "title img"
+      "subtitle img"
+      "text img";
+    grid-column-gap: 2em;
+  }
+
+  .section__title--about {
+    grid-area: title;
+  }
+
+  .section__subtitle--about {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    position: relative;
+    left: -1em;
+    width: calc(100% + 2em);
+    padding-left: 1em;
+    padding-right: calc(200px + 4em);
+  }
+
+  .about-me__img {
+    grid-area: img;
+    position: relative;
+    z-index: 2;
+  }
 }
