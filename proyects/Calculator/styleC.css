@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center; /*vertical*/
+    justify-content: center; /*Horizontaly*/
+}
+
+.calculator{
+    flex: 0 0 95%;
+
+}
+
+.screen{
+    width: 100%;
+    font-size: 7rem;
+    padding: 0.5rem;
+    background: rgb(46, 46, 56);
+    border: none;
+    color: white;
+}
+
+/**************************************
+BUTTONS
+**************************************/
+
+.buttons{
+    display: flex;
+    flex-wrap: wrap;
+    transition: all 0.5s linear;
+}
+
+button{
+    flex: 0 0 25%;
+    padding: 0.25rem;
+    border: 1px solid black;
+    transition: all 2s ease;
+}
+
+button:hover{
+    background-color: blue;
+}
+
+
+.btn-yellow{
+    background-color: rgb(208, 221, 24);
+    color: black;
+}
+
+.btn-grey{
+    background: rgb(224,224,224);
+}
+
+.btn,.btn-clear,.btn-equal{
+font-size: 4rem;
+}
+
+.btn-clear{
+    background-color: #ff0000; 
+}
+
+.btn-equal{
+    background-color: #06e206;
+}
+
