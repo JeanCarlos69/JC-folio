@@ -17,6 +17,12 @@
   --clr--dark: #303030;
   --clr--accent: #16e0bd;
 
+  --gradiants: linear-gradient(90deg, 
+  #e25822 ,
+  #20c3d0);
+
+  /* #16e0bd */
+
   --fs--h1: 3rem;
   --fs--h2: 2.25rem;
   --fs--h3: 1.25rem;
@@ -31,7 +37,7 @@
     --fs--h1: 4.5rem;
     --fs--h2: 3.75rem;
     --fs--h3: 1.5rem;
-    --fs--body: 1.125rem;
+    --fs--body: 11.125rem; /*1.125rem*/
   }
 }
 
@@ -39,6 +45,15 @@
 /* coment this html if something goes wrong  */
 html {
   scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+  color: var(--clr--accent);
+}
+
+span{
+  color: var(--clr--accent);
 }
 
 body {
@@ -74,7 +89,7 @@ strong {
 .btn {
   display: inline-block;
   padding: 0.5em 2.5em;
-  background: #16e0bd;
+  background: var(--clr--accent);
   color: var(--clr-dark);
   text-decoration: none;
   cursor: pointer;
@@ -135,9 +150,26 @@ h3 {
 }
 
 .section__subtitle--work {
-  color: #16e0bd;
+  color: var(--clr--accent);
   font-weight: var(--fw-bold);
   margin-bottom: 2em;
+}
+
+.bg-name{
+  font-size: 6rem;
+  /* background-image: url(../img/programming-1873854_640.jpg); */
+  background: var(--gradiants);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 400%;
+  animation: bg-animation 4s infinite alternate;
+  /* name time revolution alternate that makes it go backward */
+}
+
+@keyframes bg-animation{
+  0%{background-position: left;}
+  100%{ background-position: right;}
 }
 
 /* HEADER */
@@ -153,8 +185,8 @@ header {
 
 .nav {
   position: fixed;
-  background: #303030;
-  color: #fff;
+  background: var(--clr--dark);
+  color: var(--clr--light);
   top: 0;
   bottom: 0;
   left: 0;
@@ -184,7 +216,7 @@ header {
 }
 
 .nav__link:hover{
-  color: #16e0bd;
+  color: var(--clr--accent);
 }
 
 
@@ -196,7 +228,7 @@ header {
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-  background: #16e0bd;
+  background: var(--clr--accent);
   width: 2em;
   height: 3px;
   border-radius: 1em;
@@ -221,7 +253,7 @@ header {
     padding: .5em;
     background: transparent;
     border: 0;
-    color: #fff;
+    color: var(--clr--light);
     cursor: pointer;
     right: 1em;
     top: 1em;
@@ -388,8 +420,8 @@ header {
 /* ** MY WORK ** */
 
 .my-work {
-  background-color: #303030;
-  color: #fff;
+  background-color: var(--clr--dark);
+  color: var(--clr--light);
   text-align: center;    
 }
 
@@ -400,7 +432,7 @@ header {
 }
 
 .portfolio__item {
-  background: #16e0bd;
+  background: var(--clr--accent);
   overflow: hidden; /*it grows inside itself*/
   
 }
@@ -437,7 +469,7 @@ header {
 
 .footer {
   background: #111;
-  color: #16e0bd;
+  color: var(--clr--accent);
   text-align: center;
   padding: 2.5em 0;
   font-size: 1.25rem;
