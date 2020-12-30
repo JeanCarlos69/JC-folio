@@ -1,0 +1,34 @@
+:root{
+    --clr--light: #fff;
+    --clr--dark: #303030;
+    --clr--accent: #16e0bd;
+}
+
+
+.homeBtn{
+    text-decoration: none;
+    color: var(--clr--accent);
+}
+
+.homeBtn {
+    display: inline-block;
+    padding: 0.5em 2.5em;
+    background: #16e0bd;
+    color: var(--clr-dark);
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: var(--fw-bold);
+    transition: transform 200ms ease-in-out;
+  }
+  
+  .homeBtn:hover {
+    transform: scale(1.1);
+  }
+
+  .poke{
+    background: linear-gradient(to right, #efefbb, #d4d3dd);
+    border-style: double;
+  }

@@ -20,10 +20,10 @@ equalBtn.addEventListener('click',function(){
 let value = eval(screen.value);
 //screen.value = value !== undefined ? value  : alert('Introduce a value');
 
-if(value === 69) return screen.value = '( ͡° ͜ʖ ͡°)';
+//if(value === 69) return screen.value = '( ͡° ͜ʖ ͡°)';
 
 if( value !== undefined){
-    screen.value = value
+    screen.value = value.toFixed(2);
 } else{
     alert('Please enter a numerical value.');
 }
