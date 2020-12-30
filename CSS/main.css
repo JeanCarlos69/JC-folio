@@ -163,8 +163,9 @@ h3 {
   background-clip: text;
   color: transparent;
   background-size: 400%;
-  animation: bg-animation 2.5s infinite alternate;
+  animation: bg-animation 3.5s infinite alternate;
   /* name time revolution alternate that makes it go backward */
+  text-shadow: 6px 1px 0px var(--clr--dark);
 }
 
 @keyframes bg-animation{
