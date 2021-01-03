@@ -27,6 +27,7 @@
   --fs--h2: 2.25rem;
   --fs--h3: 1.25rem;
   --fs--body: 1rem;
+  --fs-quotes: 1.5rem
 
   --bs: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
@@ -511,12 +512,54 @@ header {
   padding: .5em;
 }
 
+/* QUOTES */
+.containerq{
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 2rem;
+    /* flex: 0 0 80%; */
+    width: 80vw;
+    margin: 3rem auto 3rem auto;
+}
+/* blur effect */
+.containerq{
+  background: rgba(22, 224, 189, 0.25);
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 3.0px );
+  -webkit-backdrop-filter: blur( 3.0px );
+  border-radius: 10px;
+}
 
 
+blockquote{
+  margin: 0 auto;
+  font-size: 2rem;
+  width: 60vw;
+  font-style: italic;
+  text-shadow: 1px 3px 5px var(--clr--dark);
+  
+}
 
+  .row{
+  display: flex;
+  }
+  
+  #author{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size:2rem;
+  }
 
-/* 
-      Notes:
-      -see variables on CSS, bugs
+  #left,#right,#random{
+    cursor: pointer;
+    width: 10%;
+  }
 
-*/
+  #left{
+    margin-right: auto;
+  }
+
+  #right{
+    margin-left: auto;
+  }
