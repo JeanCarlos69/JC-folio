@@ -23,12 +23,12 @@ const quotes = [
     },
     {
         name:'Madara',
-        quote:'In this world, wherever there is light – there are also shadows. As long as the concept of winners exists, there must also be losers. The selfish desire of wanting to maintain peace causes wars, and hatred is born to protect love.'
+        quote:'As long as the concept of winners exists, there must also be losers. The selfish desire of wanting to maintain peace causes wars, and hatred is born to protect love.'
     },
 
     {
         name:'Donquixote Doflamingo',
-        quote:'Kids who have never seen peace and kids who have never seen war have different values! Those who stand at the top determine whats wrong and whats right! This very place is neutral ground! Justice will prevail, you say? But of course it will! Whoever wins this war becomes justice!'
+        quote:'Those who stand at the top determine whats wrong and whats right! Justice will prevail, you say? But of course it will! Whoever wins this war becomes justice!'
     },
 
     {
@@ -42,6 +42,22 @@ const quotes = [
     {
         name: 'Eminem',
         quote: "Nobody likes to fail. I want to succeed in everything I do, which isn’t much. But the things that I’m really passionate about, if I fail at those, if I’m not successful, what do I have?"
+    },
+    {
+        name:'Monkey D. Luffy',
+        quote: 'If you don’t take risks, you can’t create a future.'
+    },
+    {
+        name:'Son Goku',
+        quote:'Power comes in response to a need, not a desire. You have to create that need.'
+    },
+    {
+        name:'The Joker',
+        quote:'You truly are incorruptible, aren’t you? You won’t kill me out of some misplaced sense of self-righteousness. And I won’t kill you because you’re just too much fun. I think you and I are destined to do this forever.'
+    },
+    {
+        name:'Bruce Wayner',
+        quote:'People need dramatic examples to shake them out of apathy and I can’t do that as Bruce Wayne. As a man I’m flesh and blood, I can be ignored, I can be destroyed, but as a symbol, as a symbol I can be incorruptible.I can be everlasting.'
     }
 ];
 
