@@ -331,7 +331,8 @@ header {
   background-color: var(--clr--dark); /*play with the color without background-blend-mode*/
   background-image: url(../img/pexels-marta-branco.jpg);
   background-size: cover;
-  background-blend-mode: multiply; /*darker layout*/
+  /*darker layout*/
+  background-blend-mode: multiply; 
   color: var(--clr--light);
   text-align: center;
 }
@@ -477,13 +478,19 @@ header {
   font-size: 1.25rem;
 }
 
-.footer a { 
+.footer ul a { 
   color: inherit;
   text-decoration: none;
+  /* font-size: 2.1em; */
+  /* transform: scale(0.8); */
+  transition: 0.5s;
+}
+/* translateY(-xp) move it up */
+.footer ul a:hover{
+  transform: scale(0.8) translateY(-15px) translateX(10px);
 }
 
 .footer__link {
-  
   font-weight: var(--fw-bold);
 }
 
@@ -506,7 +513,10 @@ header {
 
 .social-list__item {
   margin: 0 .5em;
+  
 }
+
+
 
 .social-list__link {
   padding: .5em;
@@ -521,6 +531,7 @@ header {
     /* flex: 0 0 80%; */
     width: 80vw;
     margin: 3rem auto 3rem auto;
+    font-family: 'Times New Roman', Times, serif;
 }
 /* blur effect */
 .containerq{
@@ -534,11 +545,24 @@ header {
 
 blockquote{
   margin: 0 auto;
-  font-size: 2rem;
+  font-size: 2em;
   width: 60vw;
-  font-style: italic;
   text-shadow: 1px 3px 5px var(--clr--dark);
+}
+
+@media (max-width: 798px){
+  .containerq{
+    width: 100vw;
+  }
   
+  blockquote{
+  font-size: 1.7rem;
+  }
+
+  #author{
+    font-size: 1.8rem;
+  }
+
 }
 
   .row{
