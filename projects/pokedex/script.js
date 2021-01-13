@@ -1,5 +1,5 @@
 const poke_container = document.getElementById('poke-container');
-const pokemon_count = 151;
+const pokemon_count = 152; //890 max
 
 
 const colors = {
@@ -38,7 +38,7 @@ const createPokemonCard = (pokemon) => {
     const pokemonEl = document.createElement('div');
     pokemonEl.classList.add('pokemon');
 
-    const nombre =  pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
+    const name =  pokemon.name[0].toUpperCase() + pokemon.name.slice(1);
 
     const pokeTypes = pokemon.types.map(type => type.type.name);
     const type = mainTypes.find(type => pokeTypes.indexOf(type)> -1)
@@ -53,7 +53,7 @@ const createPokemonCard = (pokemon) => {
     </div>
     <div class="info">
         <span class="number">#${pokemon.id}</span>
-        <h3 class="name">${nombre}</h3>
+        <h3 class="name">${name}</h3>
         <small class="type">Type: <span>${type}</span> </small>
     </div>
     `
