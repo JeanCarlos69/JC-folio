@@ -9,39 +9,39 @@
 
 
   <div class="keys">
-    <div data-key="65" class="key">
+    <div data-key="65" class="key" id="65">
       <kbd>A</kbd>
       <span class="sound">clap</span>
     </div>
-    <div data-key="83" class="key">
+    <div data-key="83" class="key" id="83">
       <kbd>S</kbd>
       <span class="sound">hihat</span>
     </div>
-    <div data-key="68" class="key">
+    <div data-key="68" class="key" id="68">
       <kbd>D</kbd>
       <span class="sound">kick</span>
     </div>
-    <div data-key="70" class="key">
+    <div data-key="70" class="key" id="70">
       <kbd>F</kbd>
       <span class="sound">openhat</span>
     </div>
-    <div data-key="71" class="key">
+    <div data-key="71" class="key" id="71">
       <kbd>G</kbd>
       <span class="sound">boom</span>
     </div>
-    <div data-key="72" class="key">
+    <div data-key="72" class="key" id="72"> 
       <kbd>H</kbd>
       <span class="sound">ride</span>
     </div>
-    <div data-key="74" class="key">
+    <div data-key="74" class="key" id="74">
       <kbd>J</kbd>
       <span class="sound">snare</span>
     </div>
-    <div data-key="75" class="key">
+    <div data-key="75" class="key" id="75">
       <kbd>K</kbd>
       <span class="sound">tom</span>
     </div>
-    <div data-key="76" class="key">
+    <div data-key="76" class="key" id="76">
       <kbd>L</kbd>
       <span class="sound">tink</span>
     </div>
@@ -69,11 +69,32 @@
     key.classList.add('playing');
   }
   
+  // ************************************************
+  /*
+  I coudn't find a way to make them work without IDs but later on I'll try again just using data-,
+  if it's possible.
+  */
   const mClicks = document.querySelectorAll('.key');
   
   mClicks.forEach(mClick => mClick.addEventListener('click', f => {
-    console.log('works')
+    //console.log(f.path[1].id);
+
+    const square =  document.querySelector(`.key[data-key= '${f.path[1].id}']`); 
+    const aux = document.querySelector(`audio[data-key= '${f.path[1].id}']`);
+
+    if (!aux) return; 
+
+  
+
+    aux.currentTime = 0; //rewind it to the start
+
+    aux.play(); //play sounds in JS
+
+    square.classList.add('playing');
+
   }))
+  // ************************************************
+
   
   //removing the playing class
   
@@ -88,7 +109,7 @@
   })
   
   window.addEventListener('keydown', playLetter);
-  window.addEventListener('click', playLetter);
+  //window.addEventListener('click', mouseClick);
 </script>
 
 
