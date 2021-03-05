@@ -97,8 +97,6 @@ function leftA(){
     } else{
         i--;
     };
-
-    console.log(i);
     quoteB();
 }
 
@@ -110,7 +108,6 @@ function randomQ(){
 
    i = randomQuote
     quoteB();
-    console.log(randomQuote);
 }
 
 randomQ();

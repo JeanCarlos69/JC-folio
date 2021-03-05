@@ -301,7 +301,7 @@ header {
     display: grid;
     width: min-content;
     margin: 0 auto;
-    grid-column-gap: 1em;
+   column-gap: 1em;
     grid-template-areas:
       "img title"
       "img subtitle";
@@ -586,4 +586,8 @@ blockquote{
 
   #right{
     margin-left: auto;
+  }
+
+  .eip{
+    cursor: pointer;
   }
